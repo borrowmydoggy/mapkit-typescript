@@ -1,5 +1,5 @@
 {
-  "name": "mapkit-typescript",
+  "name": "@borrowmydoggy/mapkit-typescript",
   "version": "5.49.0",
   "description": "Typescript type definitions for MapKit JS",
   "repository": "wsmd/mapkit-typescript",
