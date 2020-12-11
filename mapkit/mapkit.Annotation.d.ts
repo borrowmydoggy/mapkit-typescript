@@ -65,6 +65,7 @@ declare namespace mapkit {
     static readonly CollisionMode: {
       readonly Rectangle: string;
       readonly Circle: string;
+      readonly None: string;
     };
     /**
      * The annotation's coordinate.

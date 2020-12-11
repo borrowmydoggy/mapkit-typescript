@@ -71,11 +71,27 @@ declare namespace mapkit {
      * A map region that provides a hint for the geographic area to search.
      */
     region?: mapkit.CoordinateRegion;
-
+    /**
+     * A Boolean value that indicates whether the search results should include addresses.
+     */
     includeAddresses?: boolean;
+    /**
+     * A Boolean value that indicates whether the search results should include points of interest.
+     */
     includePointsOfInterest?: boolean;
+    /*
+     * A Boolean value that indicates whether the search autocomplete results should include
+     * queries.
+     */
     includeQueries?: boolean;
+    /*
+     * A filter used to include or exclude point of interest categories.
+     */
     pointOfInterestFilter?: PointOfInterestFilter;
+    /**
+     * A string that constrains search results to within the provided countries.
+     */
+    limitToCountries?: string;
   }
 
   type SearchCallback<Q> = (
@@ -133,19 +149,31 @@ declare namespace mapkit {
     /**
      * A language ID that determines the language for the search result text.
      */
-    language: string;
+    language?: string;
     /**
      * A map coordinate that provides a hint for the geographic area to search.
      */
-    coordinate: mapkit.Coordinate;
+    coordinate?: mapkit.Coordinate;
     /**
      * A map region that provides a hint for the geographic area to search.
      */
-    region: mapkit.CoordinateRegion;
-
-    includeAddresses: boolean;
-    includePointsOfInterest: boolean;
-    pointOfInterestFilter: boolean;
+    region?: mapkit.CoordinateRegion;
+    /*
+     * A Boolean value that indicates whether the search results should include addresses.
+     */
+    includeAddresses?: boolean;
+    /*
+     * A Boolean value that indicates whether the search results should include points of interest.
+     */
+    includePointsOfInterest?: boolean;
+    /*
+     * A filter used to include or exclude point of interest categories in search results.
+     */
+    pointOfInterestFilter?: boolean;
+    /*
+     * A string that constrains search results to within the provided countries.
+     */
+    limitToCountries?: string;
   }
 
   /**
@@ -196,12 +224,37 @@ declare namespace mapkit {
   }
 
   interface SearchAutocompleteOptions {
-    language: string;
-    coordinate: mapkit.Coordinate;
-    region: mapkit.CoordinateRegion;
-    includeAddresses: boolean;
-    includePointsOfInterest: boolean;
-    includeQueries: boolean;
-    pointOfInterestFilter: mapkit.PointOfInterestFilter;
+    /*
+     * A language ID that determines the language for the search result text.
+     */
+    language?: string;
+    /*
+     * A map coordinate that provides a hint for the geographic area to search.
+     */
+    coordinate?: mapkit.Coordinate;
+    /*
+     * A map region that provides a hint for the geographic area to search.
+     */
+    region?: mapkit.CoordinateRegion;
+    /*
+     * A Boolean value that indicates whether the search results should include addresses.
+     */
+    includeAddresses?: boolean;
+    /*
+     * A Boolean value that indicates whether the search results should include points of interest.
+     */
+    includePointsOfInterest?: boolean;
+    /*
+     * A Boolean value that indicates whether the search results should include queries.
+     */
+    includeQueries?: boolean;
+    /*
+     * A filter used to include or exclude point of interest categories in search results.
+     */
+    pointOfInterestFilter?: mapkit.PointOfInterestFilter;
+    /*
+     * A string that constrains search results to within the provided countries.
+     */
+    limitToCountries?: string;
   }
 }
